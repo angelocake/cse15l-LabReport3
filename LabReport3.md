@@ -3,7 +3,7 @@
 ## Researching Commands (`grep`)
 * The command alterations that I chose to further reseach on for grep were as follows:
   1. `-n`: displays the lines that matched the input and the line number they were found on
-  2. `-c`: displays the number lines that match the given input
+  2. `-c`: displays the number of lines that match the given input
   3. `-l`: displays files containing the matched input
   4. `-o`: displays the matched pattern only
   5. `-v`: displays all lines without matches to the input
@@ -29,11 +29,23 @@ Here is another example of me using the command `grep -n`
 
 These example illustrate the key use of the command `grep -n` which is used when trying to search through a large txt document to find specific instances. To make it better, it also displays the line that the instance was found on making it easier to search through a document for that instance of the match.
 
-### `-c` (the number lines that match the given input)
-* 
-![example_c_1](https://user-images.githubusercontent.com/130005453/236668771-ab3c64a0-505b-4d1f-bc75-524b6528f8f9.png)
+### `-c`
+* This command displays the number of lines that match the given input in a file
+* To write this command you would follow this format: `grep -c "text you are looking for" filename/path_to_file`
 
+Here is an example I ran for the command `grep -c` which I checked the line count that had the word "case" in it in the file chapter-1.txt
+![example_c_1](https://user-images.githubusercontent.com/130005453/236668771-ab3c64a0-505b-4d1f-bc75-524b6528f8f9.png)
+* The red bracket portion is the example terminal which I used the `grep -c`command
+** It's output was the number 3, meaning that within the chapter-1.txt file, there are only 3 lines which contain the word "case"
+* The blue bracket is to show you which lines the word "case" is found in and the specific place in that same sentence where the word is found.
+
+Here is another example I ran for the command `grep -c` which I checked the line count that had the word "state" in it in the file chapter-1.txt
 ![example_c_2](https://user-images.githubusercontent.com/130005453/236669531-0c707fa0-feed-4003-a47f-d3b54549dc79.png)
+* The red bracket portion is the example terminal which I used the `grep -c`command
+** It's output was the number 10, meaning that within the chapter-1.txt file, there are only 10 lines which contain the word "state"
+* The blue bracket is to show you which lines the word "state" is found in and the specific place in that same sentence where the word is found.
+
+From these examples you get the idea of why you would want to use this command in order to see the number of instances of a specific word. It also comes in handy when combining that piece of information with the command `grep -n` because this command gives you more specifics on more than just the number of instances that the word is found.
 
 ### `-l` (files containing the match)
 * 
