@@ -97,12 +97,25 @@ These example code pieces should give you the understanding that this command is
 ## `-o`
 * This command displays all the portions of text taht match the given input
 * To write this command you would follow this format: `grep -o "text you are looking to match" filename/path_to_file`
+(Note: if the input occurs a vast number of times in a file then it will be printed a vast number of times)
 
 Here is an example I ran for the command `grep -o` which I checked the number of matched for the word "case" in the file chapter-1.txt
 ![example_o_1](https://user-images.githubusercontent.com/130005453/236736410-6cdaba12-3a83-45a0-84a3-d4c40df5561e.png)
+* The middle part of the terminal (with a 3 next to it) is the example code I ran to demonstarte the `grep -o` command
+* The output in this part was a print out of the word "case" 3 times
+** The reason for this was because the instance of "case" was found 3 times in the file chapter-1.txt so the word "case" was printed three times
+** To prove this, the bottom part of the terminal shows a `grep -c` code being implemented to seaarch for the number of lines which had the word "case" in it for the same exact file as the middle command
+*** Since the number of times the word "case" was the exact same number of lines which had the word "case" in it then we can assume that the command `-o` prints the input the number of times corresponding to the number of times it was found in the document.
 
 Here is an example I ran for the command `grep -o` which I checked the number of matched for the word "tech" in the file chapter-1.txt
 ![example_o_2](https://user-images.githubusercontent.com/130005453/236736984-1a409403-b8a0-43c2-8875-ecac1ff15614.png)
+* The output in this terminal was a print out of the word "tech" 3 times
+** The reason for this was because the instance of "tech" was found 3 times in the file chapter-1.txt so the word "tech" was printed three times
+** To prove this, a control+f was done on this programm in which I searched for the number of instances of "tech"
+*** On the top right of the image you can see that the "tech" has 3 total instances in the document
+* So because "tech" was found 3 times in the document chapter-1.txt it was printed in our terminal 3 times as well
+
+So the command(`grep -o`) seems to be useful for finding the number of instances a certain word/phrase appears in a `.txt` file. It is also worth mentioning that the command itself only find instances that the certain word/phrase appears but does not print out the word it came from in the text. So if you were searching for "tech" in a file, you would see tech printed a certain number of times because it was found in words such as "technology". It's also worth noting that the command `grep -n` basically has the same functionality without having to print out the input phrase a certain number of times.
 
 # Site used for information
 [geeksforgeeks.org](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
